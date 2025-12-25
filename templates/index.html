@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🌱 Plant Disease Progression Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h1>🌱 Plant Disease Progression Predictor</h1>
+    <p class="muted">Upload a leaf photo and enter your city.</p>
+
+    <form id="uploadForm">
+      <input type="file" name="image" id="image" accept="image/*" required />
+      <input type="text" name="city" id="city" placeholder="e.g., Sylhet" required />
+      <button type="submit">Predict</button>
+    </form>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
